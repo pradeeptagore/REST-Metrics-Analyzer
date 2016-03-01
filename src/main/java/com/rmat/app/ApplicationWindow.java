@@ -1,5 +1,9 @@
 package com.rmat.app;
 
+/*
+ * Setting up front end using java swing 
+ * Contributor: Roshan & Pradeep
+ */
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
