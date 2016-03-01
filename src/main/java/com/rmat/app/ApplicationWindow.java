@@ -3,6 +3,7 @@ package com.rmat.app;
 /*
  * Setting up front end using java swing 
  * Contributor: Roshan & Pradeep
+ * Gotta verify if this works in real time
  */
 import java.awt.EventQueue;
 
