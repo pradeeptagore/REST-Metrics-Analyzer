@@ -5,4 +5,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>REST-Metrics-Analyzer</name>
   <description>REST Metrics analyzer is an open source tool to analyze, monitor and test RESTFul APIs</description>
+  <dependencies>
+  <dependency>
+		<groupId>com.sun.jersey</groupId>
+		<artifactId>jersey-client</artifactId>
+		<version>1.8</version>
+	</dependency>
+  </dependencies>	
 </project>
