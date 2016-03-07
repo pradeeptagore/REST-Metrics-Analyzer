@@ -20,6 +20,7 @@ public class ApplicationWindow {
 	private JFrame frame;
 	private JTextField textField;
 	private JTextPane textPane;
+	private JComboBox<String> comboBox;
 
 	/**
 	 * Launch the application.
@@ -62,7 +63,11 @@ public class ApplicationWindow {
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		JComboBox comboBox = new JComboBox();
+		comboBox = new JComboBox<String>();
+		comboBox.addItem("GET");
+		comboBox.addItem("POST");
+		comboBox.addItem("PUT");
+		comboBox.addItem("DELETE");
 		comboBox.setBounds(302, 9, 59, 24);
 		frame.getContentPane().add(comboBox);
 		
@@ -73,7 +78,7 @@ public class ApplicationWindow {
 		JButton btnNewButton = new JButton("Send");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textPane.setText(new RestClient().getRestResponse(textField.getText()));
+				textPane.setText(new RestClient().getRestResponse(textField.getText(),comboBox.getSelectedItem().toString()));
 			}
 		});
 		btnNewButton.setFont(new Font("Dialog", Font.PLAIN, 8));
